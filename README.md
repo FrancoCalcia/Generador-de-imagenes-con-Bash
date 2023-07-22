@@ -3,5 +3,6 @@
 Debe tener instalado Docker en la pc.
 ejecutar los siguientes comandos:
 
-mkdir script (descargar los archivos dentro de la carpeta script)
-sudo docker build -t tuia/tp .
+docker build -t edptuia .
+docker run -it --name mi_contenedor -v $(pwd):/script edptuia
+
