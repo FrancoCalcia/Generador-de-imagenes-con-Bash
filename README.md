@@ -1,9 +1,13 @@
 
 ###Trabajo practico EDP 2023
+
 **EDP-PRACTICA-INTEGRADORA-ATOCHE-CALCIA-HECK**
+
 - Debe tener instalado Docker en la pc
 - Luego ejecutar los siguientes comandos:
+
 ####Código en consola
+
 ``
 Paso 1:
 ``
