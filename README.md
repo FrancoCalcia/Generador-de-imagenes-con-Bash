@@ -3,7 +3,7 @@
 
 **Trabajo realizado en Bash**
 
--El programa consiste en generar un contenedor que al ejecutarse presente un menú de opciones para procesar un lote de imágenes. Las imágenes a analizar son descargadas o generadas desde internet y se almacenan dentro de un contenedor para su posterior análisis. 
+El programa consiste en generar un contenedor que al ejecutarse presente un menú de opciones para procesar un lote de imágenes. Las imágenes a analizar son descargadas o generadas desde internet y se almacenan dentro de un contenedor para su posterior análisis. 
 
 Se programan los siguientes scripts:
 
