@@ -1,7 +1,7 @@
 
-### Trabajo practico EDP 2023
+### Generador de imagenes
 
-**EDP-PRACTICA-INTEGRADORA-ATOCHE-CALCIA-HECK**
+**Trabajo realizado en Bash**
 
 - Debe tener instalado Docker en la pc
 - Luego ejecutar los siguientes comandos:
