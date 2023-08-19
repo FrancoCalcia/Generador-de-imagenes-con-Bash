@@ -1,10 +1,13 @@
 #!/bin/bash
+directorio="$PWD"
 
 while true
 do
 
+
 #Estos mensajes se van a imprimir por pantalla y luego el usuario va a poner la opcion que desee
 #La entrada se va a guardar en la variable 'opcion', para que posteriormente se interactue con ella.
+
 	echo "¿Qué desea descomprimir?"
 	echo "1. Imágenes comprimidas"
 	echo "2. Suma de verificaciones"
@@ -15,8 +18,19 @@ do
 	if [[ "$opcion" =~ ^[0-9]+$ ]]; then	
   		if (("$opcion" == 1)); then #Si la entrada es un numero válido, va a entrar en este if donde se evalua la condicion ingresada y se procederá a correr dicha la condicion.
   			if ls imagenes_categorizadas.zip>/dev/null 2>&1; then
-    				unzip imagenes_categorizadas.zip
+    				unzip imagenes_categorizadas.zip #Se descomprime el archivo
+    				#Se busca dentro de las carpetas Masc. y Fem. las fotos para posteriormente moverlas hacia la carpeta inicial
+    				find "$directorio/ImagenesMasculinas/" -type f -name "*.jpg" | while read -r archivo; do
+        				mv "$archivo" "$directorio"
+    				done
+    				find "$directorio/ImagenesFemeninas/" -type f -name "*.jpg" | while read -r archivo; do
+        				mv "$archivo" "$directorio"
+    				done
+    				#SE eliminan los archvios
     				rm -r imagenes_categorizadas.zip
+				rm -r ImagenesMasculinas
+				rm -r ImagenesFemeninas
+				    			
     			else
     				echo "No existe el archivo para descomprimir"
     			fi	
